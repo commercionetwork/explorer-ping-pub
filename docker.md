@@ -18,7 +18,7 @@ mkdir -p local_env/chains/testnet
 setup chains config
 
 ```bash
-tee local_env/chains/mainnet/yourchain.json <<-'EOF'
+tee local_env/chains/mainnet/yourchain.json > /dev/null <<EOF
 {
   "chainId": "ping-mainnet",
   "lcd": "https://rpc.ping.pub",
@@ -39,6 +39,7 @@ tee local_env/chains/mainnet/yourchain.json <<-'EOF'
     }
   ]
 }
+EOF
 ```
 
 change parameters in `yourchain.json` with your own chain parameters.
